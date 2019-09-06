@@ -32,7 +32,7 @@ int main(int argc, char** argv){
 	}
 	cout<<endl<<"Impresoras Guardadas:"<<p1[1].modelo;
 	cout<<endl<<"Precio:"<<p1[1].precio;
-	cout<<endl<<"Modelos guardados"<<p1[1].impresor.tipo;
+	cout<<endl<<"Modelos guardados:"<<p1[1].impresor.tipo;
 	
 	getch();
 	return 0;
