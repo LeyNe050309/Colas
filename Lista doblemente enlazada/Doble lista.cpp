@@ -1,88 +1,83 @@
-#include <iostream>
-#include <conio.h>
+
+#include<iostream>
+#include<conio.h>
+#include<stdio.h>
+
 using namespace std;
+
 struct Nodo{
-int valor;
-Nodo *Anterior; 
-Nodo *Siguiente;
+	int dato;
+	Nodo* siguiente;
 };
-void agregar(int);
-void mostrar();
-void mostrar_an();
 
-struct Nodo *lista=NULL;
-int main(int argc, char** argv) {
-int option,agreg,num;
-while(option!=3){
-cout<<":-:-:LISTA DOBLEMEMNTE ENLAZADA:-:-:"<<endl;
-cout<<"1.- Ingresar valores de la lista"<<endl;
-cout<<"2.- Mostrar los valores de la lista"<<endl;
-cout<<"3.- Salir"<<endl;
+int main(int argc, char** argv){
+	int option;
+	int dato;
+	//recorrer
+	
+	cout<<":-:-:-:MENU DE LISTA ENLAZADA:-:-:-:"<<endl;
+	cout<<"Elija la opcion que desee realizar."<<endl;
+	cout<<"1. Agregar elementos a la lista. "<<endl;
+	cout<<"2. Mostrar elementos de la lista. "<<endl;
+	cout<<"3. Eliminar un elemento de la lista. "<<endl;
+	cout<<"4. Salir."<<endl;
+	cin>>option;
+	
+	switch(option){
+		case 1:
+			cout<<"Ingrese el dato que desee agregar a la lista"<<endl;
+			cin>>dato;
+			
+			void agregar(int dato){
+				Nodo* Lista;
+				Nodo* actual;
+				Nodo* aux2;
+				
+			aux2=new Nodo();
+			aux2->dato;
+			aux2->siguiente=NULL;
+			Lista=aux2;
+			actual=aux2;
+			
+			}
 
-cin>>option;
-
-switch (option){
-    case 1:
-        cout<<"Ingrese el numero de datos que desea agregar"<<endl;
-        cin>>num;
-        for (int i=1;i<=num;i++){
-        cout<<"Ingrese los datos"<<endl;
-        cin>>agreg;
-        agregar(agreg);
-}
-        break;
-    case 2:
-        cout<<"Mostrar los datos de la lista"<<endl;
-        cout<<" "" "<<endl;
-        
-		mostrar();
-        cout<<" "" "<<endl;
-		
-		mostrar_an();
-        cout<<" "" "<<endl;
-
-        break;
-
-    case 3:
-        cout<<"Salir";
-        default:
-        cout<<"Gracias por usar este programa"<<endl;
-        break;
-}
-}
-    return 0;
-}
-void agregar(int agreg)
-{
-    Nodo *nuevo= new Nodo;
-    nuevo->Siguiente=NULL;
-    nuevo->Anterior=NULL;
-    nuevo->valor=agreg;
-    if(lista==NULL)lista=nuevo;
-    else{
-    Nodo *aux=lista;
-    while(aux->Siguiente!=NULL){
-    aux=aux->Siguiente;
-}
-    aux->Siguiente=nuevo;
-    nuevo->Anterior=aux;
-}
-}
-void mostrar(){
-    Nodo *aux=lista;
-    while(aux!=NULL){
-    cout<<aux->valor<<" -> ";
-    aux=aux->Siguiente;
-}
-}
-void mostrar_an()
-{
-    Nodo *aux=lista;
-    while(aux->Siguiente!=NULL){
-    aux=aux->Siguiente;
-}
-    while(aux!=NULL){
-    cout<<aux->valor<<" -> ";
-    aux=aux->Anterior;
-}
-}
+			
+			aux2=new Nodo();
+			aux2->dato;
+			aux2->siguiente=NULL;
+			Lista=aux2;
+			actual=aux2;
+			
+			aux2=new Nodo();
+			aux2->dato;
+			aux2->siguiente=NULL;
+			actual->siguiente=aux2;
+			actual=aux2;
+			
+			aux2=new Nodo();
+			aux2->dato;
+			aux2->siguiente=NULL;
+			actual->siguiente=aux2;
+			actual=aux2;
+			
+			aux2=new Nodo();
+			aux2->dato;
+			aux2->siguiente=NULL;
+			actual->siguiente=aux2;
+			actual=aux2;
+			
+			actual=Lista;
+			
+		case 2:
+			cout<<"Los elementos de la lista son: "<<endl;
+			while(actual->siguiente!=NULL){
+			cout<<actual->dato<<" ";
+			actual=actual->siguiente;
+			}
+			
+		case 3:
+		    cout<<"Ingrese el elemento que desee eliminar "<<endl;
+					
+	}
+	getch();
+	return 0;
